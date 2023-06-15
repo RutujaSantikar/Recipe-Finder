@@ -1,0 +1,56 @@
+<mat-toolbar class="bg-white flex justify-between">
+  <div
+    class="logo-cont pt-9 w-11/12 my-0 mx-auto sm:w-11/12 sm:my-0 sm:mx-auto sm:flex sm:justify-between"
+  >
+    <div class="flex sm:flex">
+      <img src="/assets/logo.png" alt="logo" class="w-6 h-6 sm:w-8 sm:h-8" />
+      <a
+        class="font-semibold sm:text-2xl sm:font-bold cursor-pointer"
+        routerLink="/"
+        >Gorama</a
+      >
+    </div>
+    <div class="myfav-cont hidden sm:block">
+      <a
+        class="sm:text-lg sm:font-normal cursor-pointer"
+        routerLink="/favorites"
+        >My Favorites</a
+      >
+    </div>
+    <div class="right-cont hidden sm:flex sm:justify-between sm:items-center">
+      <input
+        type="text"
+        placeholder="search here.."
+        class="sm:text-lg sm:font-normal sm:border border-black sm:outline-none sm:p-1 sm:rounded-lg"
+      />
+      <a
+        class="sm:text-lg sm:font-normal cursor-pointer mx-5"
+        routerLink="/cart"
+        >My Cart</a
+      >
+      <button mat-stroked-button class="sm:text-lg sm:font-normal">
+        Sign In
+      </button>
+    </div>
+
+    <span class="sm:hidden" style="position: absolute; top: 23px; right: 20px">
+      <button
+        mat-icon-button
+        aria-label="Example icon button with a vertical three dot icon"
+        (click)="toggleSideNav()"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </span>
+    <div *ngIf="isOpen" class="sm:hidden">
+      <a
+        class="sm:text-lg sm:font-normal cursor-pointer"
+        routerLink="/favorites"
+        >My Favorites</a
+      >
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+    </div>
+  </div>
+</mat-toolbar>

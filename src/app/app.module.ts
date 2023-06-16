@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RecipesComponent } from './recipes/recipes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';
@@ -17,11 +16,17 @@ import { CartComponent } from './cart/cart.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecipesComponent,
     HeaderComponent,
     RecipelistComponent,
     RecipedetailComponent,
@@ -30,6 +35,8 @@ import {MatIconModule} from '@angular/material/icon';
     InspirationorderComponent,
     MyfavsComponent,
     CartComponent,
+    SignupComponent,
+    LoginComponent,
   
   ],
   imports: [
@@ -39,7 +46,11 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
-      MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+      ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

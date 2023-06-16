@@ -5,6 +5,8 @@ import { MyfavsComponent } from './myfavs/myfavs.component';
 import { CartComponent } from './cart/cart.component';
 import { InspirationorderComponent } from './inspirationorder/inspirationorder.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path:'', component:InspirationorderComponent
@@ -16,8 +18,13 @@ const routes: Routes = [
   },
   {
     path:'cart', component:CartComponent
+  },
+  {
+    path: 'signup', component:SignupComponent
   }
-  
+  , {
+    path:'login', component:LoginComponent
+  }
 ];
 
 @NgModule({

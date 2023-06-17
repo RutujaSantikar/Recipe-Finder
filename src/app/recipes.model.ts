@@ -5,7 +5,8 @@ export interface Recipe {
     ratings: number;
     servings: number;
     cooking_time: string;
-    prepration_time: string;
+  prepration_time: string;
+  cuisine: string;
     ingredients: string[];
     instructions: string[]
 
@@ -18,11 +19,12 @@ export const recipe: Recipe[]=
     {
      id:1,
      title:'Capsicum Corn Pizza',
-     img:' https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/country-feast-cheese-maxx.01396975bebd766302f117884bbb9304.1.jpg',
+     img:'https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/country-feast-cheese-maxx.01396975bebd766302f117884bbb9304.1.jpg',
      ratings:4.2,
      servings:4,
-     cooking_time:'15 minutes',
-     prepration_time:'20 minutes',
+     cooking_time:'15 min',
+    prepration_time: '20 min',
+     cuisine:'pizza',
      ingredients:[
         '2 readymade pizza base',
       '1 medium onion ( finely chopped)',
@@ -69,11 +71,12 @@ export const recipe: Recipe[]=
     {
      id:2,
      title:'Paneer Pizza',
-     img:' https://product-assets.faasos.io/production/product/image_es_1608634656049_Picante%20Paneer%20Cheese%20Burst%20Pizza.jpg',
+     img:'https://product-assets.faasos.io/production/product/image_es_1608634656049_Picante%20Paneer%20Cheese%20Burst%20Pizza.jpg',
      ratings:4.5,
      servings:4,
-     cooking_time:'20 minutes',
-     prepration_time:'30 minutes',
+     cooking_time:'20 min',
+      prepration_time: '30 min',
+     cuisine:'pizza',
      ingredients:[
        '2 readymade pizza base',
        '100 gm paneer',
@@ -118,11 +121,12 @@ export const recipe: Recipe[]=
     {
      id:3,
      title:'Margherita Pizza',
-     img:' https://previews.123rf.com/images/mizina/mizina1704/mizina170400133/76090138-people-hand-taking-slice-of-pizza-margherita-pizza-margarita-and-child-hand-close-up.jpg',
+     img:'https://previews.123rf.com/images/mizina/mizina1704/mizina170400133/76090138-people-hand-taking-slice-of-pizza-margherita-pizza-margarita-and-child-hand-close-up.jpg',
      ratings:4.1,
      servings:4,
-     cooking_time:'15 minutes',
-     prepration_time:'20 minutes',
+     cooking_time:'15 min',
+      prepration_time: '20 min',
+     cuisine:'pizza',
      ingredients:[
        '2 readymade pizza base',
        'Margherita cheese',
@@ -171,11 +175,12 @@ export const recipe: Recipe[]=
     {
      id:4,
      title:'Cheese Pizza',
-     img:'  https://img.freepik.com/premium-photo/slice-hot-italian-pizza-with-stretching-cheese-pizza-four-cheeses-with-basil_79782-3174.jpg',
+     img:'https://img.freepik.com/premium-photo/slice-hot-italian-pizza-with-stretching-cheese-pizza-four-cheeses-with-basil_79782-3174.jpg',
      ratings:3.9,
      servings:4,
-     cooking_time:'15 minutes',
-     prepration_time:'20 minutes',
+     cooking_time:'15 min',
+      prepration_time: '20 min',
+     cuisine:'pizza',
      ingredients:[
        '2 readymade pizza base',
        'Mozrella cheese',
@@ -223,8 +228,9 @@ export const recipe: Recipe[]=
      img:'https://cookingteach.com/media/posts/10/Veggie-Pizza-cooking-teach.jpg',
      ratings:5.1,
      servings:4,
-     cooking_time:'15 minutes',
-     prepration_time:'20 minutes',
+     cooking_time:'15 min',
+      prepration_time: '20 min',
+     cuisine:'pizza',
      ingredients:[
        '2 readymade pizza base',
        'Mozrella cheese',
@@ -274,8 +280,9 @@ export const recipe: Recipe[]=
      img:'https://i1.wp.com/wp-backend.thefearlesscooking.com/wp-content/uploads/2021/04/DSC01126-01.jpeg',
      ratings:5.1,
      servings:2,
-     cooking_time:'10 minutes',
-     prepration_time:'20 minutes',
+     cooking_time:'10 min',
+      prepration_time: '20 min',
+     cuisine:'burger',
      ingredients:[
       ' 1 Bread bun',
    '  1 boiled potato',
@@ -317,8 +324,9 @@ export const recipe: Recipe[]=
      img:'https://www.cooking4allseasons.com/wp-content/uploads/2014/10/PotatoandSweetCornSliders.jpg',
      ratings:5.1,
      servings:2,
-     cooking_time:'15 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'15 min',
+      prepration_time: '35 min',
+     cuisine:'burger',
      ingredients:[
   '      4 Tbsp Olive oil',
  ' 1 / 2 Leek',
@@ -342,7 +350,7 @@ export const recipe: Recipe[]=
   ],
      instructions:[
 
-       'Heat up 2 tbsp of olive oil in a hot pan; add the onions, leeks, celery and the corn and season with salt and thyme and sauté for 5 minutes'
+       'Heat up 2 tbsp of olive oil in a hot pan; add the onions, leeks, celery and the corn and season with salt and thyme and sauté for 5 min'
    ,
       'Peel the cooked potatoes, grate or mash the potatoes in a bowl.'
    ,
@@ -384,8 +392,9 @@ export const recipe: Recipe[]=
      img:'https://img.freepik.com/premium-photo/homemade-vegan-burgers-with-chickpea-pattie-green-peas-beetroot-hummus_128659-346.jpg',
      ratings:5.5,
      servings:2,
-     cooking_time:'15 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'15 min',
+      prepration_time: '25 min',
+     cuisine:'burger',
      ingredients:[
       ' 1 Bread bun',
    '  1 cup paneer',
@@ -428,8 +437,9 @@ export const recipe: Recipe[]=
      img:'https://st2.depositphotos.com/1290614/6909/i/450/depositphotos_69091113-stock-photo-quinoa-burger-with-avocado.jpg',
      ratings:5.5,
      servings:2,
-     cooking_time:'15 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'15 min',
+      prepration_time: '25 min',
+     cuisine:'burger',
      ingredients:[
       ' 1 Bread bun',
    '  1 cup paneer',
@@ -472,8 +482,9 @@ export const recipe: Recipe[]=
      img:'https://i.pinimg.com/originals/c0/ba/34/c0ba34dc7e051cc9411093744dfa7327.jpg',
      ratings:5.5,
      servings:2,
-     cooking_time:'15 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'15 min',
+      prepration_time: '25 min',
+     cuisine:'burger',
      ingredients:[
       ' 1 Bread bun',
    '  1 cup paneer',
@@ -515,8 +526,9 @@ export const recipe: Recipe[]=
      img:'https://st.depositphotos.com/1010050/2506/i/950/depositphotos_25069951-stock-photo-vegetable-sandwiches.jpg',
      ratings:5.5,
      servings:4,
-     cooking_time:'15 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'15 min',
+      prepration_time: '25 min',
+     cuisine:'sandwich',
      ingredients:[
     
 'onions		2 tbsp',
@@ -564,8 +576,9 @@ export const recipe: Recipe[]=
      img:'https://img-global.cpcdn.com/recipes/f7da3dff291206ab/1200x630cq70/photo.jpg',
      ratings:4.3,
      servings:2,
-     cooking_time:'15 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'15 min',
+      prepration_time: '25 min',
+      cuisine:'sandwich',
      ingredients:[
     
 'onions		2 tbsp',
@@ -616,8 +629,9 @@ export const recipe: Recipe[]=
      img:'https://img.freepik.com/premium-photo/paneer-bhurji-sandwich-is-tasty-paneer-based-dish-made-with-cottage-cheese-served-with-fresh-tomato-ketchup-green-mint-chutney-selective-focus_466689-30307.jpg',
      ratings:5.3,
      servings:2,
-     cooking_time:'20 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'20 min',
+      prepration_time: '25 min',
+      cuisine:'sandwich',
      ingredients:[
    'paneer 2 cups', 
 'onions		2 tbsp',
@@ -666,8 +680,9 @@ export const recipe: Recipe[]=
      img:'https://www.ruchikrandhap.com/wp-content/uploads/2017/09/Paneer-Corn-Spinach-Sandwich-4-1-1024x643.jpg',
      ratings:5.3,
      servings:2,
-     cooking_time:'20 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'20 min',
+      prepration_time: '25 min',
+      cuisine:'sandwich',
      ingredients:[
        'chopped spinach 2 cups', 
        'boiled corn 1 cup',
@@ -718,8 +733,9 @@ export const recipe: Recipe[]=
      img:'https://us.123rf.com/450wm/sonyakamoz/sonyakamoz1710/sonyakamoz171000238/88437886-healthy-breakfast-sandwiches-bread-toasts-with-fried-eggs-and-fresh-vegetables-on-wooden-board-over.jpg',
      ratings:5.3,
      servings:2,
-     cooking_time:'20 minutes',
-     prepration_time:'25 minutes',
+     cooking_time:'20 min',
+      prepration_time: '25 min',
+      cuisine:'sandwich',
      ingredients:[
     
        'boiled eggs 2',
@@ -771,8 +787,9 @@ export const recipe: Recipe[]=
      img:'https://d33wubrfki0l68.cloudfront.net/cc8d307e0d502686770f2aec6fd0c57cd58982f3/1bfd0/images/uploads/2018_08_26_black_forest_cake_0.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+      cuisine:'cake',
      ingredients:[
 '    2 ⅛ cups all-purpose flour',
 
@@ -802,10 +819,10 @@ export const recipe: Recipe[]=
    'Whisk flour, sugar, cocoa, baking powder, baking soda, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; beat until combined. Pour cake batter into the prepared pans.'
    ,
    
-   'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 minutes. Cool layers in pans on wire racks for 10 minutes. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
+   'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 min. Cool layers in pans on wire racks for 10 min. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
    ,
    
-   'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 minutes. Transfer to the refrigerator to cool completely before assembling cake.'
+   'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 min. Transfer to the refrigerator to cool completely before assembling cake.'
    ,
    
    'Now apply butter on the top side of the bread ,Land the buttered side bread on the pan and cook till it turns golden brown in colour.'
@@ -837,8 +854,9 @@ export const recipe: Recipe[]=
      img:'https://img.freepik.com/premium-photo/red-velvet-cake-wooden-board_34439-725.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+       prepration_time: '35 min',
+     cuisine:'cake',
      ingredients:[
 '    2 ⅛ cups all-purpose flour',
 
@@ -868,10 +886,10 @@ export const recipe: Recipe[]=
    'Whisk flour, sugar, cocoa, baking powder, baking soda, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; beat until combined. Pour cake batter into the prepared pans.'
    ,
    
-   'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 minutes. Cool layers in pans on wire racks for 10 minutes. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
+   'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 min. Cool layers in pans on wire racks for 10 min. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
    ,
    
-   'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 minutes. Transfer to the refrigerator to cool completely before assembling cake.'
+   'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 min. Transfer to the refrigerator to cool completely before assembling cake.'
    ,
    
    'Now apply butter on the top side of the bread ,Land the buttered side bread on the pan and cook till it turns golden brown in colour.'
@@ -902,8 +920,9 @@ export const recipe: Recipe[]=
      img:'https://thecafesucrefarine.com/wp-content/uploads/2016/11/Easy-Overnight-Coffee-Cake-4.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'cake',
      ingredients:[
 '    2 ⅛ cups all-purpose flour',
 
@@ -932,9 +951,9 @@ export const recipe: Recipe[]=
     'Whisk flour, sugar, cocoa, baking powder, baking soda, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; beat until combined. Pour cake batter into the prepared pans.'
     ,
     
-'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 minutes. Cool layers in pans on wire racks for 10 minutes. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
+'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 min. Cool layers in pans on wire racks for 10 min. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
 ,
-    'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 minutes. Transfer to the refrigerator to cool completely before assembling cake.'
+    'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 min. Transfer to the refrigerator to cool completely before assembling cake.'
     ,
 
 'Now apply butter on the top side of the bread ,Land the buttered side bread on the pan and cook till it turns golden brown in colour.'
@@ -966,8 +985,9 @@ export const recipe: Recipe[]=
      img:'https://i.pinimg.com/564x/59/96/fa/5996fa7262f20043fedbf482fbda5f72.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'cake',
      ingredients:[
 '    2 ⅛ cups all-purpose flour',
 
@@ -997,10 +1017,10 @@ export const recipe: Recipe[]=
     'Whisk flour, sugar, cocoa, baking powder, baking soda, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; beat until combined. Pour cake batter into the prepared pans.'
     ,
     
-'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 minutes. Cool layers in pans on wire racks for 10 minutes. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
+'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 min. Cool layers in pans on wire racks for 10 min. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
 ,
 
-'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 minutes. Transfer to the refrigerator to cool completely before assembling cake.'
+'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 min. Transfer to the refrigerator to cool completely before assembling cake.'
 ,
 
 'Now apply butter on the top side of the bread ,Land the buttered side bread on the pan and cook till it turns golden brown in colour.'
@@ -1033,8 +1053,9 @@ export const recipe: Recipe[]=
      img:'https://st2.depositphotos.com/1773130/7992/i/450/depositphotos_79925368-stock-photo-chocolate-cupcakes-with-a-cup.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'cake',
      ingredients:[
 '    2 ⅛ cups all-purpose flour',
 
@@ -1057,17 +1078,10 @@ export const recipe: Recipe[]=
 
   ],
      instructions:[
-    
-    'Preheat the oven to 350 degrees F (175 degrees C). Grease and flour two 9-inch round cake pans; line bottoms with parchment paper. Place a medium bowl in the refrigerator to chill.'
-    ,
-    
-    'Whisk flour, sugar, cocoa, baking powder, baking soda, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; beat until combined. Pour cake batter into the prepared pans.'
-    ,
-    
-    'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 minutes. Cool layers in pans on wire racks for 10 minutes. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.'
-    ,
-     
-'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 minutes. Transfer to the refrigerator to cool completely before assembling cake.'
+    'Preheat the oven to 350 degrees F (175 degrees C). Grease and flour two 9-inch round cake pans; line bottoms with parchment paper. Place a medium bowl in the refrigerator to chill.',
+    'Whisk flour, sugar, cocoa, baking powder, baking soda, and salt together in a large bowl. Add eggs, milk, oil, and vanilla; beat until combined. Pour cake batter into the prepared pans.' ,
+    'Bake in the preheated oven until a toothpick inserted in the centers comes out clean, about 35 min. Cool layers in pans on wire racks for 10 min. Run a paring knife around edges to loosen and invert carefully onto racks to cool completely, 1 to 2 hours.' ,
+   'While cake layers bake, drain cherries for topping, reserving 1/2 cup juice. Combine reserved juice, cherries, sugar, and cornstarch in a 2-quart saucepan. Cook, stirring constantly, over low heat until thickened. Stir in vanilla. Let cool at room temperature for 30 min. Transfer to the refrigerator to cool completely before assembling cake.'
     ,
  'Now apply butter on the top side of the bread ,Land the buttered side bread on the pan and cook till it turns golden brown in colour.'
     ,
@@ -1098,17 +1112,17 @@ export const recipe: Recipe[]=
      img:'https://img.freepik.com/premium-photo/homemade-mango-ice-cream-bowls-with-fresh-fruits-dark-gray_186277-2005.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'icecream',
      ingredients:[
-
-'2 + ¼ cup milk',
-'½ cup sugar',
-'8-10 saffron strands',
-'or ½ cup store bought condensed milk',
-'1 cup mango puree',
-'1 cup whipping cream',
-'½ cup fresh mango chunks'
+    '2 + ¼ cup milk',
+    '½ cup sugar',
+    '8-10 saffron strands',
+    'or ½ cup store bought condensed milk',
+    '1 cup mango puree',
+    '1 cup whipping cream',
+    '½ cup fresh mango chunks'
   ],
      instructions:[
 
@@ -1117,7 +1131,7 @@ export const recipe: Recipe[]=
 
 'Add saffron strands and give it a mix.'
 ,
-'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 minutes. Let it cool and transfer it into a bowl.'
+'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 min. Let it cool and transfer it into a bowl.'
     ,
      
        'Add mango puree to it and give it a good mix. Keep it aside.'
@@ -1146,201 +1160,125 @@ export const recipe: Recipe[]=
      {
      id:22,
      title:'Mango Icecream',
-     img:' https://st2.depositphotos.com/1692343/7371/i/600/depositphotos_73719939-stock-photo-homemade-organic-vanilla-ice-cream.jpg',
+     img:'https://st2.depositphotos.com/1692343/7371/i/600/depositphotos_73719939-stock-photo-homemade-organic-vanilla-ice-cream.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+       prepration_time: '35 min',
+     cuisine:'icecream',
      ingredients:[
- '2 tbsp vanila extract',
-'2 + ¼ cup milk',
-'½ cup sugar',
-'8-10 saffron strands',
-'or ½ cup store bought condensed milk',
-'1 cup mango puree',
-'1 cup whipping cream',
-'½ cup fresh mango chunks'
+    '2 tbsp vanila extract',
+    '2 + ¼ cup milk',
+    '½ cup sugar',
+    '8-10 saffron strands',
+    'or ½ cup store bought condensed milk',
+    '1 cup mango puree',
+    '1 cup whipping cream',
+    '½ cup fresh mango chunks'
   ],
      instructions:[
-    
-    'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..'
-    ,
-    
-       'Add saffron strands and give it a mix.'
-    ,
-   'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 minutes. Let it cool and transfer it into a bowl.'
-    ,
-    'Add mango puree to it and give it a good mix. Keep it aside.'
-    ,
-   
-   'You can also use ½ cup store bought condensed milk instead of the one we made.'
-   ,
-   
-    'In another bowl, whip the whipping cream till soft peaks.'
-    
-    ,
-        'Fold the whipped cream with the mango mixture and mix them gently.'
-    
-    ,
-    
-    'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.'
-    
-    ,
-       'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.'
-    
-    ,
-
-   
+     'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..',
+     'Add saffron strands and give it a mix.',
+   'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 min. Let it cool and transfer it into a bowl.',
+    'Add mango puree to it and give it a good mix. Keep it aside.'    ,
+   'You can also use ½ cup store bought condensed milk instead of the one we made.',
+    'In another bowl, whip the whipping cream till soft peaks.',
+    'Fold the whipped cream with the mango mixture and mix them gently.',
+    'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.',
+    'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.' 
     ]
     },
     {
      id:23,
      title:'Choco Icecream',
-     img:' https://previews.123rf.com/images/tobi/tobi1412/tobi141200033/34439224-scoops-of-dark-chocolate-ice-cream.jpg',
+     img:'https://previews.123rf.com/images/tobi/tobi1412/tobi141200033/34439224-scoops-of-dark-chocolate-ice-cream.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'icecream',
      ingredients:[
- '2 tbsp vanila extract',
-'2 + ¼ cup milk',
-'½ cup sugar',
-'8-10 saffron strands',
-'or ½ cup store bought condensed milk',
-'1 cup mango puree',
-'1 cup whipping cream',
-'½ cup fresh mango chunks'
+      '2 tbsp vanila extract',
+      '2 + ¼ cup milk',
+      '½ cup sugar',
+      '8-10 saffron strands',
+      'or ½ cup store bought condensed milk',
+      '1 cup mango puree',
+      '1 cup whipping cream',
+      '½ cup fresh mango chunks'
   ],
      instructions:[
-   'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..'
-    ,
-    
-    'Add saffron strands and give it a mix.'
-    ,
-   'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 minutes. Let it cool and transfer it into a bowl.'
-,
-'Add mango puree to it and give it a good mix. Keep it aside.'
-    ,
-  'You can also use ½ cup store bought condensed milk instead of the one we made.'
-   ,
-   
-       'In another bowl, whip the whipping cream till soft peaks.'
-    
-       ,
- 'Fold the whipped cream with the mango mixture and mix them gently.'
-        ,
-        'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.'
-    
-       ,
-       'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.',
-
-   
+   'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..',
+    'Add saffron strands and give it a mix.',
+   'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 min. Let it cool and transfer it into a bowl.',
+'   Add mango puree to it and give it a good mix. Keep it aside.',
+  'You can also use ½ cup store bought condensed milk instead of the one we made.',
+   'In another bowl, whip the whipping cream till soft peaks.',
+    'Fold the whipped cream with the mango mixture and mix them gently.'    ,
+    'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.'     ,
+     'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.',
     ]
     },
     {
      id:24,
      title:'Rose and Tender Coconut Icecream',
-     img:'  https://blog.cruisefashion.com/image.axd?picture=/cocorose2.jpg',
+     img:'https://blog.cruisefashion.com/image.axd?picture=/cocorose2.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
-     ingredients:[
- '2 tbsp vanila extract',
-'2 + ¼ cup milk',
-'½ cup sugar',
-'8-10 saffron strands',
-'or ½ cup store bought condensed milk',
-'1 cup mango puree',
-'1 cup whipping cream',
-'½ cup fresh mango chunks'
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'icecream',
+        ingredients:[
+    '2 tbsp vanila extract',
+    '2 + ¼ cup milk',
+    '½ cup sugar',
+    '8-10 saffron strands',
+    'or ½ cup store bought condensed milk',
+    '1 cup mango puree',
+    '1 cup whipping cream',
+    '½ cup fresh mango chunks'
   ],
-     instructions:[
-    
-    'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..'
-    ,
-    
-      'Add saffron strands and give it a mix.'
-    ,
-    
-       'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 minutes. Let it cool and transfer it into a bowl.'
-    ,
-    'Add mango puree to it and give it a good mix. Keep it aside.'
-    ,
-  'You can also use ½ cup store bought condensed milk instead of the one we made.'
-    ,
-   'In another bowl, whip the whipping cream till soft peaks.'
-    
-       ,
-    
-       'Fold the whipped cream with the mango mixture and mix them gently.'
-    
-     ,
-     
-       'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.'
-    
-       ,
-       'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.'
-,
-
-   
+ instructions:[
+   'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..',
+   'Add saffron strands and give it a mix.',
+   'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 min. Let it cool and transfer it into a bowl.' ,
+   'Add mango puree to it and give it a good mix. Keep it aside.',
+   'You can also use ½ cup store bought condensed milk instead of the one we made.',
+   'In another bowl, whip the whipping cream till soft peaks.',
+   'Fold the whipped cream with the mango mixture and mix them gently.',
+   'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.' ,
+  'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.',
     ]
     },
     {
      id:25,
      title:'Coffee Icecream',
-     img:' https://st3.depositphotos.com/1027198/14795/i/600/depositphotos_147957555-stock-photo-coffee-ice-cream.jpg',
+     img:'https://st3.depositphotos.com/1027198/14795/i/600/depositphotos_147957555-stock-photo-coffee-ice-cream.jpg',
      ratings:5.5,
      servings:12,
-     cooking_time:'170 minutes',
-     prepration_time:'35 minutes',
+     cooking_time:'170 min',
+      prepration_time: '35 min',
+     cuisine:'icecream',
      ingredients:[
- '2 tbsp vanila extract',
-'2 + ¼ cup milk',
-'½ cup sugar',
-'8-10 saffron strands',
-'or ½ cup store bought condensed milk',
-'1 cup mango puree',
-'1 cup whipping cream',
-'½ cup fresh mango chunks'
+      '2 tbsp vanila extract',
+      '2 + ¼ cup milk',
+      '½ cup sugar',
+      '8-10 saffron strands',
+      'or ½ cup store bought condensed milk',
+      '1 cup mango puree',
+      '1 cup whipping cream',
+      '½ cup fresh mango chunks'
   ],
-     instructions:[
-    
-    'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..'
-    ,
-    'Add saffron strands and give it a mix.'
-    ,
-    
-      'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 minutes. Let it cool and transfer it into a bowl.'
-    ,
-    
-
-    'Add mango puree to it and give it a good mix. Keep it aside.'
-    ,
-
-'You can also use ½ cup store bought condensed milk instead of the one we made.'
-    ,
-   
-       'In another bowl, whip the whipping cream till soft peaks.'
-    
-       ,
-    
-      'Fold the whipped cream with the mango mixture and mix them gently.'
-    
-     ,
-     
-'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.'
-    
-,
-'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.'
-    
-    
-
-   
-    ]
+ instructions:[
+    'In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..',
+    'Add saffron strands and give it a mix.' ,
+    'Keep stirring the mixture till it thickens and reduces to ⅓ of its original quantity. Take it off the heat but keep stirring for another 2 min. Let it cool and transfer it into a bowl.' ,
+    'Add mango puree to it and give it a good mix. Keep it aside.',
+    'You can also use ½ cup store bought condensed milk instead of the one we made.',
+    'In another bowl, whip the whipping cream till soft peaks.'   ,
+    'Fold the whipped cream with the mango mixture and mix them gently.' ,
+    'Fold the mango chunks into it and pour the mixture into a container or a loaf pan like me.',
+    'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.'
+  ]
     },
-    
-    
-    
-  
- ]
+]

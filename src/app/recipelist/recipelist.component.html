@@ -1,1 +1,35 @@
-<p>recipelist works!</p>
+<div
+  class="pt-28 w-11/12 my-0 mx-auto sm:w-11/12 sm:my-0 sm:mx-auto grid grid-cols-2 gap-y-8 sm:grid sm:grid-cols-3 sm:gap-x-10"
+>
+  <!-- <p>myfavs works!</p> -->
+  <div
+    class="w-5/6 rounded-xl overflow-hidden shadow-md my-0 mx-auto cursor-pointer"
+    *ngFor="let recipe of recipe"
+    (click)="openRecipe(recipe.id)"
+  >
+    <img
+      [src]="recipe.img"
+      alt="Sunset in the mountains"
+      class="sm:w-auto sm:h-52"
+    />
+    <div class="p-3">
+      <div class="font-semibold sm:font-bold sm:text-xl mb-2">
+        {{ recipe.title }}
+      </div>
+    </div>
+    <div class="p-4 sm:p-6 flex justify-between">
+      <div class="rating sm:text-xl">
+        <i class="fa-solid fa-star sm:text-xl" style="color: #5f4228"></i
+        >{{ recipe.ratings }}
+      </div>
+      <div class="servings sm:text-xl">
+        <i class="fas fa-utensils sm:text-xl" style="color: #5f4228"></i>
+        {{ recipe.servings }}
+      </div>
+      <div class="time sm:text-xl">
+        <i class="fa-solid fa-clock sm:text-xl" style="color: #5f4228"></i>
+        {{ recipe.cooking_time }}
+      </div>
+    </div>
+  </div>
+</div>

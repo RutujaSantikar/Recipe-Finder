@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+filteredItems() {
+throw new Error('Method not implemented.');
+}
   title = 'recipe-finder';
 }

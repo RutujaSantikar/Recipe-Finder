@@ -9,7 +9,7 @@ import { RecipelistComponent } from './recipelist/recipelist.component';
 import { RecipedetailComponent } from './recipedetail/recipedetail.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FilterComponent } from './filter/filter.component';
-import { InspirationorderComponent } from './inspirationorder/inspirationorder.component';
+// import { InspirationorderComponent } from './inspirationorder/inspirationorder.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MyfavsComponent } from './myfavs/myfavs.component';
 import { CartComponent } from './cart/cart.component';
@@ -22,6 +22,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { RecipeService } from './recipes.service';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RecipedetailComponent,
     SearchbarComponent,
     FilterComponent,
-    InspirationorderComponent,
+    // InspirationorderComponent,
     MyfavsComponent,
     CartComponent,
     SignupComponent,
@@ -50,9 +52,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-      ReactiveFormsModule
+    ReactiveFormsModule,
+      FormsModule
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

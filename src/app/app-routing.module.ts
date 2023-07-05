@@ -3,17 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecipesComponent } from './recipes/recipes.component';
 import { MyfavsComponent } from './myfavs/myfavs.component';
 import { CartComponent } from './cart/cart.component';
-import { InspirationorderComponent } from './inspirationorder/inspirationorder.component';
+// import { InspirationorderComponent } from './inspirationorder/inspirationorder.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';
 import { RecipedetailComponent } from './recipedetail/recipedetail.component';
 const routes: Routes = [
   {
-    path:'', component:InspirationorderComponent
-  }
-  ,
-
+   path:'', component: RecipelistComponent
+ }
+,
   {
     path:'favorites', component:MyfavsComponent
   },
@@ -26,11 +25,9 @@ const routes: Routes = [
   , {
     path:'login', component:LoginComponent
   },
+
   {
-    path:'recipeList', component:RecipelistComponent
-  },
-  {
-   path:'recipeList/:id', component:RecipedetailComponent
+   path:':id', component:RecipedetailComponent
   }
 ];
 

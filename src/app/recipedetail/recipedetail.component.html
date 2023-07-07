@@ -1,6 +1,59 @@
 <div class="pt-28 w-11/12 my-0 mx-auto sm:w-11/12 sm:my-0 sm:mx-auto">
-  recipedetails
-  <div *ngIf="recipe">
-    <h1>{{ recipe.title }}</h1>
-  </div>
+  <mat-card class="p-8 -z-10">
+    <div>
+      <p class="font-semibold text-3xl">
+        {{ recipe.title }}
+      </p>
+    </div>
+    <div class="p-5 sm:flex sm:justify-around text-center">
+      <div class="sm:text-xl">
+        <div>
+          <i class="fa-solid fa-star sm:text-xl" style="color: #5f4228"></i>
+        </div>
+        <div>{{ recipe.ratings }}</div>
+      </div>
+
+      <div class="sm:text-xl">
+        <div>
+          <i class="fas fa-utensils sm:text-xl" style="color: #5f4228"></i>
+        </div>
+        <div>{{ recipe.servings }}</div>
+      </div>
+
+      <div class="sm:text-xl">
+        <div>
+          <i class="fa-solid fa-clock sm:text-xl" style="color: #5f4228"></i>
+        </div>
+        <div>{{ recipe.cooking_time }}</div>
+      </div>
+    </div>
+
+    <div class="sm:flex sm:justify-between max-w-full my-0 mx-auto pt-8">
+      <div class="ingredients">
+        <h2>Ingredients</h2>
+        <ul class="list-disc">
+          <li
+            *ngFor="let ingredient of recipe.ingredients"
+            class="sm:text-base"
+          >
+            {{ ingredient.name }}
+          </li>
+        </ul>
+      </div>
+      <div class="image w-1/3 mt-20">
+        <img [src]="recipe.img" alt="" class="rounded-3xl" />
+      </div>
+      <div class="method w-1/3">
+        <h2>Method</h2>
+        <ul class="list-decimal">
+          <li
+            *ngFor="let instructions of recipe.instructions"
+            class="sm:text-base"
+          >
+            {{ instructions.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-card>
 </div>

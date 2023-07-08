@@ -24,6 +24,9 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { RecipeService } from './recipes.service';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { FavoritesService } from './favorites.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -39,6 +42,7 @@ import { RecipeService } from './recipes.service';
     CartComponent,
     SignupComponent,
     LoginComponent,
+    
   
   ],
   imports: [
@@ -53,9 +57,11 @@ import { RecipeService } from './recipes.service';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-      FormsModule
+    FormsModule,
+    MatTooltipModule,
+      MatSnackBarModule
   ],
-  providers: [RecipeService],
+  providers: [RecipeService,FavoritesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

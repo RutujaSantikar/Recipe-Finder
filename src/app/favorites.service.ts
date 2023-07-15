@@ -6,6 +6,7 @@ export class FavoritesService{
   private favoriteRecipes: Recipe[] = []
   private storageKey = 'favoriteRecipes';
   recipe!: Recipe;
+  
 
   constructor() {
     const storedRecipes = localStorage.getItem(this.storageKey);

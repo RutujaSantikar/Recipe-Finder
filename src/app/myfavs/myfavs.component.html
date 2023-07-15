@@ -7,10 +7,10 @@
     <div
       class="w-5/6 rounded-xl overflow-hidden shadow-md my-0 mx-auto cursor-pointer"
       *ngFor="let recipe of favoriteRecipes; let i = index"
-      [routerLink]="[i]"
+      (click)="openRecipeDetail(recipe)"
     >
       <div class="">
-        <button (click)="onRemove()">
+        <button (click)="onRemove(recipe)">
           <i
             class="fa-solid fa-circle-xmark text-2xl sm:text-4xl"
             style="color: rgb(201, 201, 201)"

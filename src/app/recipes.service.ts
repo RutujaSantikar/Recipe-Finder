@@ -7,7 +7,7 @@ export class RecipeService {
  
     private recipes: Recipe[] = [
         new Recipe(
-            1,
+            0,
             'Capsicum Corn Pizza',
             'https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/country-feast-cheese-maxx.01396975bebd766302f117884bbb9304.1.jpg',
             4.2,
@@ -40,7 +40,7 @@ export class RecipeService {
                 new Instructions("Heat on slow flame till cheese melts and base turns a little crisp.")
             ]),
           new Recipe(
-            2,
+              1,
             'Paneer Pizza',
             'https://product-assets.faasos.io/production/product/image_es_1608634656049_Picante%20Paneer%20Cheese%20Burst%20Pizza.jpg',
             4.5,
@@ -73,7 +73,7 @@ export class RecipeService {
                 new Instructions("Heat on slow flame till cheese melts and base turns a little crisp.")
               ]),
       new Recipe(
-            3,
+            2,
             'Margherita  Pizza',
             'https://previews.123rf.com/images/mizina/mizina1704/mizina170400133/76090138-people-hand-taking-slice-of-pizza-margherita-pizza-margarita-and-child-hand-close-up.jpg',
             4.1,
@@ -106,7 +106,7 @@ export class RecipeService {
                 new Instructions("Heat on slow flame till cheese melts and base turns a little crisp.")
             ]),
         new Recipe(
-            4,
+             3,
             'Cheese  Pizza',
             'https://img.freepik.com/premium-photo/slice-hot-italian-pizza-with-stretching-cheese-pizza-four-cheeses-with-basil_79782-3174.jpg',
             3.9,
@@ -139,7 +139,7 @@ export class RecipeService {
                 new Instructions("Heat on slow flame till cheese melts and base turns a little crisp.")
             ]),
          new Recipe(
-            5,
+        4,
             'Veggie  Pizza',
             'https://cookingteach.com/media/posts/10/Veggie-Pizza-cooking-teach.jpg',
             3.9,
@@ -172,7 +172,7 @@ export class RecipeService {
                 new Instructions("Heat on slow flame till cheese melts and base turns a little crisp.")
              ]),
               new Recipe(
-            6,
+        5,
             'Rajma Patty Burger',
             'https://i1.wp.com/wp-backend.thefearlesscooking.com/wp-content/uploads/2021/04/DSC01126-01.jpeg',
             5.1,
@@ -204,7 +204,7 @@ export class RecipeService {
               
                   ]),
                   new Recipe(
-            7,
+        6,
             'Potato Burger',
            'https://www.cooking4allseasons.com/wp-content/uploads/2014/10/PotatoandSweetCornSliders.jpg',
             5.1,
@@ -240,7 +240,7 @@ export class RecipeService {
                 new Instructions( 'Put the lettuce, tomatoes and gherkins inside the bun along with the patty and serve with chips on the side.')
                       ]),
                     new Recipe(
-            8,
+        7,
             'Paneer & Green Peas Burger',
            'https://img.freepik.com/premium-photo/homemade-vegan-burgers-with-chickpea-pattie-green-peas-beetroot-hummus_128659-346.jpg',
             5.5,
@@ -276,7 +276,7 @@ export class RecipeService {
                 new Instructions( 'Put the lettuce, tomatoes and gherkins inside the bun along with the patty and serve with chips on the side.')
                         ]),
              new Recipe(
-            9,
+        8,
            'Vegie Burger',
            'https://st2.depositphotos.com/1290614/6909/i/450/depositphotos_69091113-stock-photo-quinoa-burger-with-avocado.jpg',
             5.5,
@@ -312,7 +312,7 @@ export class RecipeService {
                 new Instructions( 'Put the lettuce, tomatoes and gherkins inside the bun along with the patty and serve with chips on the side.')
                         ]),
                new Recipe(
-            10,
+            9,
            'Lamb & Tomato Burger',
           'https://i.pinimg.com/originals/c0/ba/34/c0ba34dc7e051cc9411093744dfa7327.jpg',
             5.5,
@@ -348,7 +348,7 @@ export class RecipeService {
                 new Instructions( 'Put the lettuce, tomatoes and gherkins inside the bun along with the patty and serve with chips on the side.')
                         ]),           
               new Recipe(
-            11,
+            10,
            'Veg Sandwich',
          'https://st.depositphotos.com/1010050/2506/i/950/depositphotos_25069951-stock-photo-vegetable-sandwiches.jpg',
             5.5,
@@ -382,7 +382,7 @@ export class RecipeService {
                   ]),        
               
                 new Recipe(
-            12,
+            11,
            'Veg Cheese Sandwich',
         'https://img-global.cpcdn.com/recipes/f7da3dff291206ab/1200x630cq70/photo.jpg',
         4.4,
@@ -415,7 +415,7 @@ export class RecipeService {
            
                     ]),     
                 new Recipe(
-            13,
+            12,
            'Paneer Sandwich',
        'https://img.freepik.com/premium-photo/paneer-bhurji-sandwich-is-tasty-paneer-based-dish-made-with-cottage-cheese-served-with-fresh-tomato-ketchup-green-mint-chutney-selective-focus_466689-30307.jpg',
         5.3,
@@ -448,7 +448,7 @@ export class RecipeService {
            
                     ]),   
                 new Recipe(
-            14,
+            13,
            'Spinach & Corn Sandwich',
       'https://www.ruchikrandhap.com/wp-content/uploads/2017/09/Paneer-Corn-Spinach-Sandwich-4-1-1024x643.jpg',
         5.3,
@@ -483,7 +483,7 @@ export class RecipeService {
            
                     ]),   
                       new Recipe(
-            15,
+        14,
            'Egg Sandwich',
      'https://us.123rf.com/450wm/sonyakamoz/sonyakamoz1710/sonyakamoz171000238/88437886-healthy-breakfast-sandwiches-bread-toasts-with-fried-eggs-and-fresh-vegetables-on-wooden-board-over.jpg',
         5.3,
@@ -518,7 +518,7 @@ export class RecipeService {
            
                           ]), 
          new Recipe(
-            16,
+            15,
            'Black Forest Cake',
   'https://d33wubrfki0l68.cloudfront.net/cc8d307e0d502686770f2aec6fd0c57cd58982f3/1bfd0/images/uploads/2018_08_26_black_forest_cake_0.jpg',
         5.5,
@@ -550,7 +550,7 @@ export class RecipeService {
            
              ]), 
          new Recipe(
-            17,
+            16,
            ' Red Velvet Cake',
  'https://img.freepik.com/premium-photo/red-velvet-cake-wooden-board_34439-725.jpg',
         5.5,
@@ -583,7 +583,7 @@ export class RecipeService {
            
                           ]), 
                        new Recipe(
-            18,
+        17,
            'Coffee Cake',
  'https://thecafesucrefarine.com/wp-content/uploads/2016/11/Easy-Overnight-Coffee-Cake-4.jpg',
         5.5,
@@ -616,7 +616,7 @@ export class RecipeService {
            
                            ]), 
         new Recipe(
-            19,
+            18,
            'Mango Cup Cake',
 'https://i.pinimg.com/564x/59/96/fa/5996fa7262f20043fedbf482fbda5f72.jpg',
         5.2,
@@ -650,7 +650,7 @@ export class RecipeService {
             ]),    
           
         new Recipe(
-            20,
+            19,
            'Choco Cup Cake',
 'https://st2.depositphotos.com/1773130/7992/i/450/depositphotos_79925368-stock-photo-chocolate-cupcakes-with-a-cup.jpg',
         5.2,
@@ -683,7 +683,7 @@ export class RecipeService {
            
             ]),   
          new Recipe(
-            21,
+            20,
            'Mango Icecream',
 'https://img.freepik.com/premium-photo/homemade-mango-ice-cream-bowls-with-fresh-fruits-dark-gray_186277-2005.jpg',
         5.2,
@@ -717,7 +717,7 @@ export class RecipeService {
                 new Instructions( 'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.')
              ]),   
          new Recipe(
-            22,
+            21,
            'Choco Icecream',
 'https://previews.123rf.com/images/tobi/tobi1412/tobi141200033/34439224-scoops-of-dark-chocolate-ice-cream.jpg',
         5.2,
@@ -751,7 +751,7 @@ export class RecipeService {
                 new Instructions( 'Cling wrap the container properly and freeze it for 6-8 hours; dig in and enjoy!.')
              ]),   
              new Recipe(
-            23,
+            22,
            'Coffee Icecream',
 'https://st3.depositphotos.com/1027198/14795/i/600/depositphotos_147957555-stock-photo-coffee-ice-cream.jpg',
         5.2,

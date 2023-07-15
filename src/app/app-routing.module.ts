@@ -14,11 +14,11 @@ const routes: Routes = [
  }
 ,
   {
-    path:'favorites', component:MyfavsComponent
+    path:'favorites', component:MyfavsComponent,
   },
-  {
-    path:'favorites/:id', component:RecipedetailComponent
-  },
+  // {
+  //   path:'favorites/:id', component:RecipedetailComponent
+  // },
   {
     path:'cart', component:CartComponent
   },
@@ -30,8 +30,10 @@ const routes: Routes = [
   },
 
   {
-   path:':id', component:RecipedetailComponent
+   path:'recipe-detail/:id', component:RecipedetailComponent
   }
+  ,
+  
 ];
 
 @NgModule({

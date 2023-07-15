@@ -9,7 +9,7 @@ export class SnackbarService {
 
   successSnackBar(message: string) {
     this.zone.run(() => {
-      this.snackBar.open(message, "Close", {
+      const snackBarRef = this.snackBar.open(message, "Close", {
         horizontalPosition:"right",
         verticalPosition: "top",
         panelClass: "success-snackbar",

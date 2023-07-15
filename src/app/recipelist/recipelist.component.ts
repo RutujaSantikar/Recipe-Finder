@@ -1,4 +1,5 @@
 import { Component , OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 // import { Recipe } from '../recipes.model';
 // import { recipe } from '../recipes.model';
 // import { Router } from '@angular/router';
@@ -27,10 +28,15 @@ export class RecipelistComponent implements OnInit{
 
   recipes!: Recipe[]
   index!: number;
-  constructor(private recipeService: RecipeService) { }
+  constructor(private recipeService: RecipeService, private router:Router) { }
   ngOnInit(): void {
     this.recipes = this.recipeService.getRecipes();
-    // console.log(this.recipes)
+    console.log(this.recipes)
     // console.log(this.id)
+  }
+
+  openRecipeDetail(index:number) {
+    this.router.navigate(['/recipe-detail', index])
+    console.log(index);
   }
 }

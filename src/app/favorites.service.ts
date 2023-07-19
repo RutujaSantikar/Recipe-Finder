@@ -23,6 +23,7 @@ export class FavoritesService{
     const index = this.favoriteRecipes.findIndex((favRecipe) => favRecipe.id === recipe.id);
     if (index !== -1) {
       this.favoriteRecipes.splice(index, 1);
+      this.saveFavoritesToLocalStorage();
     }
   }
     getFavoriteRecipes() {

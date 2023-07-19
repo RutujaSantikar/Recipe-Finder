@@ -30,7 +30,7 @@ export class MyfavsComponent implements OnInit{
 
   // }
     onRemove(recipe: Recipe) {
-    this.favService.removeFromFavorites(recipe);
+      this.favService.removeFromFavorites(recipe);
     // this.favoriteRecipes.splice(index, 1);
     this.snackbarService.successSnackBar('Recipe removed from favorites');
   }

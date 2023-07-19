@@ -27,6 +27,7 @@ import { RecipeService } from './recipes.service';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FavoritesService } from './favorites.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     FormsModule,
     MatTooltipModule,
-      MatSnackBarModule
+    MatSnackBarModule,
+      HttpClientModule
   ],
   providers: [RecipeService,FavoritesService],
   bootstrap: [AppComponent]

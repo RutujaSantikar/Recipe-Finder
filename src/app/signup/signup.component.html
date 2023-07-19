@@ -10,9 +10,13 @@
         <p
           class="text-lg sm:text-2xl text-gray-800 font-extrabold text-center p-8"
         >
-          Sign up
+          {{ loginView ? "Sign up" : "Login" }}
         </p>
-        <form action="" class="w-9/12 my-0 mx-auto">
+        <form
+          action=""
+          class="w-9/12 my-0 mx-auto"
+          [formGroup]="userSignupForm"
+        >
           <div>
             <mat-form-field
               class="example-full-width"
@@ -23,9 +27,9 @@
               <input
                 type="email"
                 matInput
-                [formControl]="emailFormControl"
                 [errorStateMatcher]="matcher"
                 placeholder="Ex. pat@example.com"
+                formControlName="email"
               />
               <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
               <mat-error
@@ -44,13 +48,13 @@
           <div>
             <mat-form-field appearance="outline" class="w-full">
               <mat-label>Password</mat-label>
-              <input matInput />
+              <input matInput formControlName="password" />
             </mat-form-field>
           </div>
-          <div>
+          <div *ngIf="loginView">
             <mat-form-field appearance="outline" class="w-full">
               <mat-label>Confirm Password</mat-label>
-              <input matInput />
+              <input matInput formControlName="cpassword" />
             </mat-form-field>
           </div>
           <div>
@@ -58,12 +62,17 @@
               mat-flat-button
               color="primary"
               class="w-full text-base sm:text-lg p-1"
+              (click)="signupUser()"
             >
-              Signup
+              {{ loginView ? "Sign up" : "Login" }}
             </button>
             <p class="text-center pt-1">
-              Already a Member ?
-              <a routerLink="/login" class="text-cyan-950">Login here</a>
+              <span *ngIf="loginView">Already a Member ?</span>
+              <span *ngIf="!loginView">New Member ?</span>
+              <!-- <a routerLink="/login" class="text-cyan-950">Login here</a> -->
+              <button class="underline" (click)="toggleView()">
+                {{ loginView ? "Login here" : "Signup here" }}
+              </button>
             </p>
           </div>
         </form>

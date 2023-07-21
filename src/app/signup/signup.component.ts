@@ -7,6 +7,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { SignupService } from '../signup.service';  
 import { SnackbarService } from '../snackbar.service';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -25,7 +26,7 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
    
   }
-  constructor(private signupService:SignupService, private snackbarService:SnackbarService,private router: Router){}
+  constructor(private signupService:SignupService, private snackbarService:SnackbarService,private router: Router,private afAuth:AngularFireAuth){}
   matcher = new MyErrorStateMatcher();
 
   userSignupForm = new FormGroup({
@@ -36,18 +37,35 @@ export class SignupComponent implements OnInit {
 
   toggleView() {
         this.loginView = !this.loginView;
-   }
+  }
+  
+  
   signupUser() {
     console.log('hello');
-    this.signupService.signupUser(this.userSignupForm.value).subscribe((response: any) => {
-      if (response) {
-        this.snackbarService.successSnackBar('Signup successful')
-        this.router.navigate(['/favorites'])
-      }
-      
-      console.log(response);
 
-    })
+    console.log(this.userSignupForm)
+      const email = this.userSignupForm.value.email;
+      const password = this.userSignupForm.value.password;
+      const cpassword = this.userSignupForm.value.cpassword;
+  
+    if (email && password) {
+    
+
+      this.afAuth['createUserWithEmailAndPassword'](email, password).then((userCredential :any ) => {
+        console.log(userCredential)
+        this.snackbarService.successSnackBar('Signup successful')
+    
+        this.router.navigate(['/favorites'])
+       }).catch((error:any) => {
+          // Handle login error
+         console.error('Signup error:', error.message);
+        this.snackbarService.errorSnackBar('Signup failed: ' + error.message);
+        });
+    }
+
+
+
+  
     
     
   }

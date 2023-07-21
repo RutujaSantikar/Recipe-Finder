@@ -1,8 +1,6 @@
-import { Component , OnInit} from '@angular/core';
+import { Component , OnInit,OnChanges} from '@angular/core';
 import { Router } from '@angular/router';
-// import { Recipe } from '../recipes.model';
-// import { recipe } from '../recipes.model';
-// import { Router } from '@angular/router';
+
 
 import { Recipe } from '../recipes.model';
 import { RecipeService } from '../recipes.service';
@@ -14,29 +12,37 @@ import { RecipeService } from '../recipes.service';
   styleUrls: ['./recipelist.component.css']
 })
 export class RecipelistComponent implements OnInit{
-  // recipe!: Recipe[];
-  // constructor(private router:Router) {
-  //   this.recipe = recipe;
-  // }
-  
-  // openRecipe(id:number) {
-  //    this.router.navigate(['/recipeList',id])
-  // }
-  // ngOnInit(): void {
-    
-  // }
+
 
   recipes!: Recipe[]
   index!: number;
+  searchRecipe = ""
+  filteredRecipes: Recipe[] = [];
+
   constructor(private recipeService: RecipeService, private router:Router) { }
-  ngOnInit(): void {
+  ngOnInit() {
     this.recipes = this.recipeService.getRecipes();
-    console.log(this.recipes)
+    this.filterRecipes();
+  
+    // console.log(this.recipes)
     // console.log(this.id)
   }
+  // ngOnChanges() {
+  //   this.filterRecipes();
+  // }
 
+  filterRecipes() {
+  
+    this.filteredRecipes = this.recipes.filter((recipe) => {
+      return recipe.title.toLowerCase().match(this.searchRecipe.toLowerCase())
+    })
+  }
   openRecipeDetail(index:number) {
     this.router.navigate(['/recipe-detail', index])
     console.log(index);
   }
+
+  
+
+   
 }

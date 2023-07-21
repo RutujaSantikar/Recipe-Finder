@@ -40,14 +40,14 @@ export class SnackbarService {
 //     });
 //   }
 
-//   public errorSnackBar(error: any) {
-//     this.zone.run(() => {
-//       this.snackBar.open(`Backend returned code ${error.status}, body was: ` + JSON.stringify(error.error), "Close", {
-//         horizontalPosition: "right",
-//         verticalPosition: "top",
-//         panelClass: "error-snackbar",
-//         duration: 3000,
-//       });
-//     });
-//   }
+  public errorSnackBar(error: any) {
+    this.zone.run(() => {
+      this.snackBar.open(error ,"Close", {
+        horizontalPosition: "right",
+        verticalPosition: "top",
+        panelClass: "error-snackbar",
+        duration: 3000,
+      });
+    });
+  }
 }

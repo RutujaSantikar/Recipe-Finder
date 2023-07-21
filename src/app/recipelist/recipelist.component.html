@@ -1,12 +1,22 @@
 <div class="pt-28 w-11/12 my-0 mx-auto sm:w-11/12 sm:my-0 sm:mx-auto">
-  <div class="py-5 text-base sm:text-3xl text-center">
+  <div class="py-4 text-base sm:text-3xl text-center">
     Lets Start Cooking With Popular Recipes!
+    <div>
+      <input
+        [(ngModel)]="searchRecipe"
+        (ngModelChange)="filterRecipes()"
+        type="text"
+        placeholder="search recipes"
+        class="sm:text-lg sm:font-normal border border-black outline-none p-1 rounded-lg sm:w-7/12  w-2/3 m-4"
+      />
+    </div>
   </div>
+
   <div class="grid grid-cols-2 gap-y-8 sm:grid sm:grid-cols-3 sm:gap-x-10">
     <div
       class="w-5/6 rounded-xl overflow-hidden shadow-md my-0 mx-auto cursor-pointer"
-      *ngFor="let recipe of recipes; let i = index"
-       (click)="openRecipeDetail(i)"
+      *ngFor="let recipe of filteredRecipes ; let i = index"
+      (click)="openRecipeDetail(i)"
     >
       <img
         [src]="recipe.img"

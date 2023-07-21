@@ -23,12 +23,7 @@ export class MyfavsComponent implements OnInit{
     this.router.navigate(['/recipe-detail', recipe.id])
   
   }
-  // onRemove() {
-  //   console.log('hey i want to delete')
-  //   const removeRecipe = this.favService.removeFromFavorites(this.recipe)
-  //   console.log(removeRecipe)
 
-  // }
     onRemove(recipe: Recipe) {
       this.favService.removeFromFavorites(recipe);
     // this.favoriteRecipes.splice(index, 1);

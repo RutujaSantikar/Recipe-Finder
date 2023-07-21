@@ -5,9 +5,9 @@ import { MyfavsComponent } from './myfavs/myfavs.component';
 import { CartComponent } from './cart/cart.component';
 // import { InspirationorderComponent } from './inspirationorder/inspirationorder.component';
 import { SignupComponent } from './signup/signup.component';
-import { LoginComponent } from './login/login.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';
 import { RecipedetailComponent } from './recipedetail/recipedetail.component';
+import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
    path:'', component: RecipelistComponent
@@ -16,14 +16,12 @@ const routes: Routes = [
   {
     path:'favorites', component:MyfavsComponent,
   },
-  // {
-  //   path:'favorites/:id', component:RecipedetailComponent
-  // },
+ 
   {
     path:'cart', component:CartComponent
   },
   {
-    path: 'signup', component:SignupComponent
+    path:'signup', component:SignupComponent
   }
   , {
     path:'login', component:LoginComponent

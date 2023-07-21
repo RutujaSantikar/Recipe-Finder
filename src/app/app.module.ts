@@ -28,6 +28,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FavoritesService } from './favorites.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from 'src/environments/environment';
+
+
+
 
 
 @NgModule({
@@ -61,7 +67,11 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatTooltipModule,
     MatSnackBarModule,
-      HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
+      
+
   ],
   providers: [RecipeService,FavoritesService],
   bootstrap: [AppComponent]

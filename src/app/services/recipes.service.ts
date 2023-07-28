@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { Recipe } from "./recipes.model";
-import { Ingredient } from "./ingredient.model";
-import { Instructions } from "./instructions.model";
+import { Recipe } from "../model/recipes.model";
+import { Ingredient } from "../model/ingredient.model";
+import { Instructions } from "../model/instructions.model";
 @Injectable()
 export class RecipeService {
  

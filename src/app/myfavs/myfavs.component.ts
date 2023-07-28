@@ -1,8 +1,8 @@
 
 import { Component,OnInit } from '@angular/core';
-import { FavoritesService } from '../favorites.service';
-import { Recipe } from '../recipes.model';
-import { SnackbarService } from '../snackbar.service';
+import { FavoritesService } from '../services/favorites.service';
+import { Recipe } from '../model/recipes.model';
+import { SnackbarService } from '../services/snackbar.service';
 import { Router } from '@angular/router';
 
 @Component({

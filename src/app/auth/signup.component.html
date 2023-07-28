@@ -1,6 +1,9 @@
 <div class="pt-28 w-2/3 my-0 mx-auto sm:w-2/4 sm:my-0 sm:mx-auto">
   <div class="signup-cont mt-8">
-    <mat-card>
+    <div *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+    <mat-card   *ngIf="!isLoading">
       <img
         src="/assets/variety/pizza.jpg"
         alt=""
@@ -10,9 +13,15 @@
         <p
           class="text-lg sm:text-2xl text-gray-800 font-extrabold text-center p-8"
         >
-          Log In
+          {{ loginView ? "Login" : "Signup" }}
         </p>
-        <form action="" class="w-9/12 my-0 mx-auto" [formGroup]="loginUserForm">
+        <form
+          action=""
+          class="w-9/12 my-0 mx-auto"
+          [formGroup]="userSignupForm"
+          (ngSubmit)="onSubmit()"
+        
+        >
           <div>
             <mat-form-field
               class="example-full-width"
@@ -23,7 +32,6 @@
               <input
                 type="email"
                 matInput
-                [formControl]="emailFormControl"
                 [errorStateMatcher]="matcher"
                 placeholder="Ex. pat@example.com"
                 formControlName="email"
@@ -45,21 +53,28 @@
           <div>
             <mat-form-field appearance="outline" class="w-full">
               <mat-label>Password</mat-label>
-              <input matInput type="password" formControlName="password" />
+              <input matInput formControlName="password" type="password" />
             </mat-form-field>
           </div>
 
-          <div>
+          <div class="pb-6">
             <button
               mat-flat-button
               color="primary"
               class="w-full text-base sm:text-lg p-1"
-              (click)="loginUser()"
             >
-              Login
+              {{ loginView ? "Login" : "Signup" }}
             </button>
           </div>
         </form>
+        <p class="text-center pt-1">
+          <!-- <a routerLink="/login" class="text-cyan-950">Login here</a> -->
+          <button class="underline" (click)="toggleView()">
+            {{
+              loginView ? "New user signup here" : "Existing user login  here"
+            }}
+          </button>
+        </p>
       </mat-card-content>
     </mat-card>
   </div>

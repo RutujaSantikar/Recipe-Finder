@@ -1,9 +1,9 @@
 import { Component ,OnInit} from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { RecipeService } from '../recipes.service';
-import { Recipe } from '../recipes.model';
-import { FavoritesService } from '../favorites.service';
-import { SnackbarService } from '../snackbar.service';
+import { RecipeService } from '../services/recipes.service';
+import { Recipe } from '../model/recipes.model';
+import { FavoritesService } from '../services/favorites.service';
+import { SnackbarService } from '../services/snackbar.service';
 @Component({
   selector: 'app-recipedetail',
   templateUrl: './recipedetail.component.html',

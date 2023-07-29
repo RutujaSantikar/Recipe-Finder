@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit{
   isMobile: boolean = false;
   sideNavOpen: boolean = false;
   isOpen: boolean = false;
+  isAuthenticated = false;
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 

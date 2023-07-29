@@ -3,7 +3,7 @@
     <div *ngIf="isLoading">
       <app-loading-spinner></app-loading-spinner>
     </div>
-    <mat-card   *ngIf="!isLoading">
+    <mat-card   *ngIf="!isLoading" >
       <img
         src="/assets/variety/pizza.jpg"
         alt=""
@@ -66,6 +66,7 @@
               {{ loginView ? "Login" : "Signup" }}
             </button>
           </div>
+          
         </form>
         <p class="text-center pt-1">
           <!-- <a routerLink="/login" class="text-cyan-950">Login here</a> -->

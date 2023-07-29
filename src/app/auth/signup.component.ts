@@ -4,11 +4,10 @@ import { FormControl,FormsModule,Validators,  FormGroupDirective,
   FormGroup,
 } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
-import { SignupService } from './signup.service';  
+import { SignupService } from '../services/signup.service';  
 import { SnackbarService } from '../services/snackbar.service';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { formatCurrency } from '@angular/common';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -25,6 +24,7 @@ export class SignupComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   loginView = true
   isLoading = false;
+  authObs: any;
 
   ngOnInit() {
    
@@ -37,7 +37,6 @@ export class SignupComponent implements OnInit {
   userSignupForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
-    cpassword: new FormControl('')
   })
   toggleView() {
         this.loginView = !this.loginView;
@@ -52,17 +51,20 @@ export class SignupComponent implements OnInit {
      if (email && password) {
        
          if (this.loginView) {
-           this.signupService.login(email, password);
+           this.authObs = this.signupService.login(email, password);
            
      }
      else {
-           this.signupService.signup(email, password);
+           this.authObs=this.signupService.signup(email, password);
            
      }
      }
+     
      this.userSignupForm.reset();
 
+     
    }
+  
   
   // signupUser() {
   //   console.log('hello');

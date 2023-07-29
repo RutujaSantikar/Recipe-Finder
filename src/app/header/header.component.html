@@ -18,16 +18,7 @@
       >
     </div>
     <div class="right-cont hidden sm:flex sm:justify-between sm:items-center">
-      <!-- <input
-        type="text"
-        placeholder="search here.."
-        class="sm:text-lg sm:font-normal sm:border border-black sm:outline-none sm:p-1 sm:rounded-lg"
-      /> -->
-      <!-- <a
-        class="sm:text-lg sm:font-medium cursor-pointer mx-5"
-        routerLink="/cart"
-        >My Cart</a
-      > -->
+    
       <button
         mat-flat-button
         color="accent"
@@ -36,16 +27,17 @@
       >
         Sign Up
       </button>
+       <button
+        mat-flat-button
+        color="primary"
+        class="sm:text-lg sm:font-medium ml-4"
+        *ngIf="isAuthenticated"
+      >
+        Logout
+      </button>
     </div>
     <!-- mobile view -->
-    <!-- 
-    <div class="search-cont sm:hidden w-11/12 my-0 mx-auto">
-      <input
-        type="text"
-        placeholder="search here..."
-        class="text-sm font-normal border border-black outline-none p-1 rounded-lg w-full"
-      />
-    </div> -->
+   
 
     <div
       class="sm:hidden "
@@ -69,9 +61,7 @@
           >My Favorites</a
         >
       </div>
-      <div class="my-8">
-        <!-- <a class="font-normal cursor-pointer" routerLink="/cart">My Cart</a> -->
-      </div>
+     
       <div>
         <button
           mat-flat-button
@@ -80,6 +70,15 @@
           routerLink="/signup"
         >
           Sign Up
+        </button>
+      </div>
+          <div>
+        <button
+          mat-flat-button
+          color="primary"
+          class="font-normal"
+        >
+          Logout
         </button>
       </div>
     </div>

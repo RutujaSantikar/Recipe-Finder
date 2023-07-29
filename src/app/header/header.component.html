@@ -14,6 +14,7 @@
       <a
         class="sm:text-lg sm:font-medium cursor-pointer"
         routerLink="/favorites"
+        matTooltip="signup or login to view favorites" 
         >My Favorites</a
       >
     </div>
@@ -27,14 +28,18 @@
       >
         Sign Up
       </button>
-       <button
+      <div *ngIf="isAuthenticated">
+          <button
         mat-flat-button
         color="primary"
         class="sm:text-lg sm:font-medium ml-4"
-        *ngIf="isAuthenticated"
+        
+         (click)=" onLogOut()"
       >
         Logout
       </button>
+      </div>
+     
     </div>
     <!-- mobile view -->
    

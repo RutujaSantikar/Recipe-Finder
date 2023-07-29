@@ -1,17 +1,32 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-
+import { User } from '../model/user.model';
 import { SnackbarService } from './snackbar.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { catchError, tap } from 'rxjs/operators';
+import { throwError,Subject } from 'rxjs';
 
+export interface AuthResponseData{
+  kind: string,
+  idToken: string,
+  email: string,
+  refreshToken: string,
+  expiresIn: string,
+  localId: string,
+  registered?:boolean
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class SignupService {
-   
-  constructor(private http: HttpClient,private afAuth:AngularFireAuth, private snackbarService:SnackbarService,private router:Router) { }
+  user = new Subject<User>();
+  constructor(
+         private http: HttpClient,
+    private afAuth: AngularFireAuth,
+    private snackbarService: SnackbarService,
+    private router: Router) { }
  
   
   signup(email: string, password: string) {
@@ -20,17 +35,20 @@ export class SignupService {
       console.log(userCredential);
       this.snackbarService.successSnackBar('Signup Successful');
       this.router.navigate(['/favorites'])
+       return userCredential.user;
+    }).then((user) => {
+      this.handleAuthentication(user.email, user.localId, user.idToken, +user.expiresIn)
+    }).catch((error: HttpErrorResponse)=> {
+      this.snackbarService.errorSnackBar(error.message)
+      return throwError(error);
     })
-    //   .catch((error: any) => {
-    //   let errorMessage = 'An unknown error occured';
-    //   if (error?.message) {
-    //     errorMessage = this.getFirebaseErrorMessage(error.message);
-    //   }
-    //   this.snackbarService.errorSnackBar(errorMessage)
-    // })
-     .catch((error: HttpErrorResponse) => {
-       this.snackbarService.errorSnackBar(error.message)
-     })
+      
+   
+  
+    //  .catch((error: HttpErrorResponse) => {
+    //    this.snackbarService.errorSnackBar(error.message)
+    //  })
+    
     
 
   }
@@ -40,52 +58,31 @@ export class SignupService {
       console.log(userCredential);
       this.snackbarService.successSnackBar('Login Successful');
       this.router.navigate(['/favorites'])
+      return userCredential.user;
+    }).then((user) => {
+      this.handleAuthentication(user.email, user.localId, user.idToken, +user.expiresIn)
+    }).catch((error: HttpErrorResponse)=> {
+      this.snackbarService.errorSnackBar(error.message)
+      return throwError(error);
     })
-    //   .catch((error: any) => {
-    //   let errorMessage = 'An unknown error occured';
-    //   if (error?.message) {
-    //     errorMessage = this.getFirebaseErrorMessage(error.message);
-    //   }
-    //   this.snackbarService.errorSnackBar(errorMessage)
-    // })
+   
     //   .catch((error: HttpErrorResponse) => {
-    //     let errorMessage;
-    //     console.log(error.message)
-    //     if (error.message === "auth/email-already-in-use") {
-    //        errorMessage="This email already exists"
-    //     }
-    //     else if (error.message === "auth/invalid-email") {
-    //       errorMessage = "This email does not exist"
-    //     }
-    //     else if (error.message === "auth/wrong-password") {
-    //        errorMessage = "This password is not correct"
-    //     }
-       
-    //     this.snackbarService.errorSnackBar(errorMessage)
-    //     return null;
+    //    this.snackbarService.errorSnackBar(error.message)
     // })
-      .catch((error: HttpErrorResponse) => {
-       this.snackbarService.errorSnackBar(error.message)
-    })
      
 
   }
   
-  // private getFirebaseErrorMessage(error: string): string {
-  //   switch (error) {
-  //     case 'auth/email-already-in-use':
-  //       return 'This email already exists';
-  //     case 'auth/invalid-email':
-  //       return 'Invalid email address';
-  //     case 'auth/weak-password':
-  //       return 'Weak password, please use a stronger one';
-  //     case 'auth/user-not-found':
-  //     case 'auth/wrong-password':
-  //       return 'Invalid email or password';
-  //     default:
-  //       return 'An unknown error occurred';
-  //   }
-  // }
+  logOut() {
+    this.user.next(new User('', '', '', new Date()));
+    this.router.navigate(['/signup'])
+  }
+
+    private handleAuthentication(email: string, userId:string,token: string, expiresIn: number) {
+      const expirationDate = new Date(new Date().getTime() +  +expiresIn * 1000);
+      const user = new User(email,userId,token, expirationDate);
+      this.user.next(user);
+  } 
 
   // private handleError(errorRes : HttpErrorResponse) {
   //     let errorMessage = 'An unknown error occured';

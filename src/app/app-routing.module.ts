@@ -5,6 +5,7 @@ import { MyfavsComponent } from './myfavs/myfavs.component';
 import { SignupComponent } from './auth/signup.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';
 import { RecipedetailComponent } from './recipedetail/recipedetail.component';
+import { AuthGuard } from './auth/auth.gaurd';
 const routes: Routes = [
 
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
  }
 ,
   {
-    path:'favorites', component:MyfavsComponent,
+    path: 'favorites', component: MyfavsComponent,
+    canActivate:[AuthGuard]
   },
  
  

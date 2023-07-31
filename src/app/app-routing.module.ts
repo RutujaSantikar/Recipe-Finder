@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RecipesComponent } from './recipes/recipes.component';
 import { MyfavsComponent } from './myfavs/myfavs.component';
 import { SignupComponent } from './auth/signup.component';
 import { RecipelistComponent } from './recipelist/recipelist.component';

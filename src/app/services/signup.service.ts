@@ -5,7 +5,7 @@ import { SnackbarService } from './snackbar.service';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { catchError, tap } from 'rxjs/operators';
-import { throwError,Subject } from 'rxjs';
+import { throwError,Subject, BehaviorSubject } from 'rxjs';
 
 export interface AuthResponseData{
   kind: string,
@@ -21,7 +21,9 @@ export interface AuthResponseData{
   providedIn: 'root'
 })
 export class SignupService {
-  user = new Subject<User>();
+  // user = new Subject<User>();
+  user = new BehaviorSubject<User | null>(null)
+  isLoading!: boolean;
   constructor(
          private http: HttpClient,
     private afAuth: AngularFireAuth,
@@ -30,7 +32,7 @@ export class SignupService {
  
   
   signup(email: string, password: string) {
-    
+    this.isLoading = true;
     this.afAuth['createUserWithEmailAndPassword'](email, password).then((userCredential: any) => {
       console.log(userCredential);
       this.snackbarService.successSnackBar('Signup Successful');
@@ -41,6 +43,8 @@ export class SignupService {
     }).catch((error: HttpErrorResponse)=> {
       this.snackbarService.errorSnackBar(error.message)
       return throwError(error);
+    }).finally(() => {
+      this.isLoading = false
     })
       
    
@@ -53,7 +57,7 @@ export class SignupService {
 
   }
   login(email:string, password:string) {
-    
+     this.isLoading= true
     this.afAuth['signInWithEmailAndPassword'](email, password).then((userCredential: any) => {
       console.log(userCredential);
       this.snackbarService.successSnackBar('Login Successful');
@@ -64,6 +68,8 @@ export class SignupService {
     }).catch((error: HttpErrorResponse)=> {
       this.snackbarService.errorSnackBar(error.message)
       return throwError(error);
+    }).finally(() => {
+      this.isLoading=false
     })
    
     //   .catch((error: HttpErrorResponse) => {
@@ -74,7 +80,8 @@ export class SignupService {
   }
   
   logOut() {
-    this.user.next(new User('', '', '', new Date()));
+    // this.user.next(new User('', '', '', new Date()));
+    this.user.next(null)
     this.router.navigate(['/signup'])
   }
 

@@ -27,6 +27,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 
 
@@ -61,7 +62,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     MatSnackBarModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
       
 
   ],

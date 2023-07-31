@@ -42,7 +42,7 @@ export class SignupComponent implements OnInit {
         this.loginView = !this.loginView;
   }
   
-   onSubmit() {
+  onSubmit() {
      console.log(this.userSignupForm.value)
       const email = this.userSignupForm.value.email;
      const password = this.userSignupForm.value.password;
@@ -52,6 +52,7 @@ export class SignupComponent implements OnInit {
        
          if (this.loginView) {
            this.authObs = this.signupService.login(email, password);
+        
            
      }
      else {
@@ -59,7 +60,7 @@ export class SignupComponent implements OnInit {
            
      }
      }
-     
+      
      this.userSignupForm.reset();
 
      

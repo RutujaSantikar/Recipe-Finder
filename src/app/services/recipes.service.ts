@@ -4,8 +4,7 @@ import { Ingredient } from "../model/ingredient.model";
 import { Instructions } from "../model/instructions.model";
 @Injectable()
 export class RecipeService {
- 
-    private recipes: Recipe[] = [
+   private recipes: Recipe[] = [
         new Recipe(
             0,
             'Capsicum Corn Pizza',
@@ -15,8 +14,7 @@ export class RecipeService {
             '15 min',
             '20 min',
             'pizza',
-            [
-                new Ingredient('2 readymade pizza base'),
+            [  new Ingredient('2 readymade pizza base'),
                 new Ingredient('1 medium onion ( finely chopped)'),
                 new Ingredient('1 medium tomato (finely chopped)'),
                 new Ingredient(' 2 tbs garlic ( finely chopped)'),
@@ -614,7 +612,7 @@ export class RecipeService {
                 new Instructions(    'Combine whipping cream and confectioners  sugar for frosting in the chilled medium bowl. Beat with an electric mixer at high speed until stiff peaks form..'),
                 new Instructions('Split each cake layer in half horizontally using a long serrated knife. Tear one layer into crumbs; set aside. Gently brush loose crumbs off top and sides of remaining layers using a pastry brush or your hands. Reserve 1 1/2 cups frosting for piping decorations on cake; set aside.'),
            
-                           ]), 
+             ]), 
         new Recipe(
             18,
            'Mango Cup Cake',
@@ -659,7 +657,6 @@ export class RecipeService {
             '35nmin',
             'cake',
              [
-                
                 new Ingredient(' 2 ⅛ cups all-purpose flour'),
                 new Ingredient('2 cups white sugar'),
                 new Ingredient( '¾ cup unsweetened cocoa powder'),
@@ -670,7 +667,6 @@ export class RecipeService {
                 new Ingredient('1 cup milk'),
                 new Ingredient('½ cup vegetable oil'),
                 new Ingredient(  '1 tablespoon vanilla extract' ),
-        
             ],
             [
                 new Instructions(  'Preheat the oven to 350 degrees F (175 degrees C). Grease and flour two 9-inch round cake pans; line bottoms with parchment paper. Place a medium bowl in the refrigerator to chill.'),
@@ -692,7 +688,6 @@ export class RecipeService {
             '35 min',
             'icecream',
              [
-                
                 new Ingredient(  '2 tbsp vanila extract'),
                 new Ingredient( '2 + ¼ cup milk'),
                 new Ingredient( '½ cup sugar'),
@@ -702,8 +697,6 @@ export class RecipeService {
                 new Ingredient(  '1 cup whipping cream'),
                 new Ingredient('1 cup milk'),
                 new Ingredient( '½ cup fresh mango chunks'),
-               
-        
             ],
             [
                 new Instructions('In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..', ),
@@ -736,8 +729,6 @@ export class RecipeService {
                 new Ingredient(  '1 cup whipping cream'),
                 new Ingredient('1 cup milk'),
                 new Ingredient( '½ cup coco powder'),
-               
-        
             ],
             [
                 new Instructions('In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..', ),
@@ -770,8 +761,6 @@ export class RecipeService {
                 new Ingredient(  '1 cup whipping cream'),
                 new Ingredient('1 cup milk'),
                 new Ingredient( '½ cup coco powder'),
-               
-        
             ],
             [
                 new Instructions('In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..', ),
@@ -804,8 +793,6 @@ export class RecipeService {
                 new Ingredient(  '1 cup whipping cream'),
                 new Ingredient('1 cup milk'),
                 new Ingredient( '½ cup coco powder'),
-               
-        
             ],
             [
                 new Instructions('In a non-stick saucepan, set over a medium heat; add milk and sugar. Give it a mix and let it come to a simmer..', ),

@@ -1,6 +1,4 @@
 export class Instructions{
-
-    constructor(public name:string) {
-        
+constructor(public name:string) {        
     }
 }

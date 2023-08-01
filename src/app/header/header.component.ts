@@ -9,15 +9,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit{
-
   private userSub!: Subscription;
   isMobile: boolean = false;
   sideNavOpen: boolean = false;
   isOpen: boolean = false;
   isAuthenticated = false;
-
   constructor(private breakpointObserver: BreakpointObserver,private signupService:SignupService) { }
-
   ngOnInit() {
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.isMobile = result.matches;

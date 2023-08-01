@@ -17,29 +17,6 @@ export class SnackbarService {
       });
     });
   }
-
-//   warningSnackBar(error: any) {
-//     this.zone.run(() => {
-//       this.snackBar.open(`Warning ${error.statusText}, error is: ` + error.name, "Close", {
-//         horizontalPosition: "right",
-//         verticalPosition: "top",
-//         panelClass: "warning-snackbar",
-//         duration: 3000,
-//       });
-//     });
-//   }
-
-//   backendWarningSnackBar(message: any) {
-//     this.zone.run(() => {
-//       this.snackBar.open(message, "Close", {
-//         horizontalPosition: "right",
-//         verticalPosition: "top",
-//         panelClass: "warning-snackbar",
-//         duration: 3000,
-//       });
-//     });
-//   }
-
   public errorSnackBar(error: any) {
     this.zone.run(() => {
       this.snackBar.open(error ,"Close", {

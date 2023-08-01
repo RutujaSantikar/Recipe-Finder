@@ -1,4 +1,3 @@
-
 import { Ingredient } from "./ingredient.model";
 import { Instructions } from "./instructions.model";
 
@@ -18,7 +17,6 @@ export class Recipe{
     servings:number, cooking_time:string, prepration_time:string, cuisine:string,
    ingredients: Ingredient[], instructions: Instructions[]
     ){
-    
      this.id=id;
      this.title=title;
      this.img=img;

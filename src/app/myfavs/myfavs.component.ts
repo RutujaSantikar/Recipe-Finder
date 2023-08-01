@@ -17,9 +17,6 @@ export class MyfavsComponent implements OnInit,OnDestroy{
   index!: number;
   private favoritesSubscription:Subscription | undefined
   constructor(private favService: FavoritesService,private snackbarService:SnackbarService, private router:Router) { }
-  // ngOnInit(): void {
-  //   this.favoriteRecipes = this.favService.getFavoriteRecipes();
-  // }
 
   ngOnInit(): void {
     this. favoritesSubscription=this.favService.getFavoriteRecipes().subscribe((recipes:any) => {
@@ -37,8 +34,7 @@ export class MyfavsComponent implements OnInit,OnDestroy{
     this.router.navigate(['/recipe-detail', recipe.id])
   
   }
-
-    onRemove(recipe: Recipe) {
+  onRemove(recipe: Recipe) {
       this.favService.removeFromFavorites(recipe);
     this.snackbarService.successSnackBar('Recipe removed from favorites');
   }

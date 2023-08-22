@@ -23,7 +23,7 @@ export interface AuthResponseData{
 export class SignupService {
   // user = new Subject<User>();
   user = new BehaviorSubject<User | null>(null)
-  isLoading!: boolean;
+  // isLoading!: boolean;
   constructor(
          private http: HttpClient,
     private afAuth: AngularFireAuth,
@@ -32,7 +32,7 @@ export class SignupService {
  
   
   signup(email: string, password: string) {
-    this.isLoading = true;
+    // this.isLoading = true;
     this.afAuth['createUserWithEmailAndPassword'](email, password).then((userCredential: any) => {
       console.log(userCredential);
       this.snackbarService.successSnackBar('Signup Successful');
@@ -44,11 +44,13 @@ export class SignupService {
       this.snackbarService.errorSnackBar(error.message)
       return throwError(error);
     }).finally(() => {
-      this.isLoading = false
+      // this.isLoading = false
     })
   }
+
+  
   login(email:string, password:string) {
-     this.isLoading= true
+    //  this.isLoading= true
     this.afAuth['signInWithEmailAndPassword'](email, password).then((userCredential: any) => {
       console.log(userCredential);
       this.snackbarService.successSnackBar('Login Successful');
@@ -60,7 +62,7 @@ export class SignupService {
       this.snackbarService.errorSnackBar(error.message)
       return throwError(error);
     }).finally(() => {
-      this.isLoading=false
+      // this.isLoading=false
     })
   }
   
@@ -71,7 +73,8 @@ export class SignupService {
   private handleAuthentication(email: string, userId:string,token: string, expiresIn: number) {
       const expirationDate = new Date(new Date().getTime() +  +expiresIn * 1000);
       const user = new User(email,userId,token, expirationDate);
-      this.user.next(user);
+    this.user.next(user);
+     console.log('User authenticated:', user);
   } 
 }
 

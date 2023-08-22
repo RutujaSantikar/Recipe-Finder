@@ -1,14 +1,10 @@
 <div class="pt-28 w-2/3 my-0 mx-auto sm:w-2/4 sm:my-0 sm:mx-auto">
   <div class="signup-cont mt-8">
-    <div *ngIf="isLoading">
-      <app-loading-spinner></app-loading-spinner>
+    <div>
+      <!-- <app-loading-spinner></app-loading-spinner> -->
     </div>
-    <mat-card   *ngIf="!isLoading" >
-      <img
-        src="/assets/variety/pizza.jpg"
-        alt=""
-        class="rounded-full w-2/6 -right-0 -top-5 sm:w-1/4 absolute sm:-right-0 sm:-top-10"
-      />
+    <mat-card >
+   
       <mat-card-content>
         <p
           class="text-lg sm:text-2xl text-gray-800 font-extrabold text-center p-8"

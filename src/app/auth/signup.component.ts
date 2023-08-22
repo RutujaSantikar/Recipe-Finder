@@ -20,7 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class SignupComponent implements OnInit {
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
   loginView = true
-  isLoading = false;
+  // isLoading = false;
   authObs: any;
 
   ngOnInit() {}
@@ -42,10 +42,11 @@ export class SignupComponent implements OnInit {
       const email = this.userSignupForm.value.email;
      const password = this.userSignupForm.value.password;
      console.log(email, password)
-     this.isLoading= true
+    //  this.isLoading= true
      if (email && password) {
          if (this.loginView) {
            this.authObs = this.signupService.login(email, password);
+          //  this.router.navigate(['/favorites'])
         }
      else {
            this.authObs=this.signupService.signup(email, password);
